@@ -9,7 +9,7 @@
 - [SDL_image](https://github.com/libsdl-org/SDL_image): for rendering image files
 
 ## Building cppui from source
-cppui uses CMake, alongside a custom python build system to merge SDL static libraries to create a standalong library.
+cppui uses CMake, alongside a custom python build system to merge SDL static libraries to create a standalone library.
 
 To build cppui, run: 
 ```bash
