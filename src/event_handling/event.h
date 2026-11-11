@@ -1,5 +1,7 @@
+#pragma once
+
 struct Event {
     bool quit = false;
 };
 
-Event event;
+inline Event event;

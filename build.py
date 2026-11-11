@@ -77,11 +77,17 @@ def merge_lib_with_sdl_libs():
 def create_dist_folder():
     DIST = ROOT / "dist"
     LIB = DIST / "lib"
+    INCLUDE = DIST / "INCLUDE"
 
-    # Recreate dist folder
-    if DIST.exists():
-        shutil.rmtree(DIST)
-    DIST.mkdir()
+    # Create dist folder or
+    if not DIST.exists():
+        DIST.mkdir()
+
+    if LIB.exists():
+        shutil.rmtree(LIB)
+
+    if INCLUDE.exists():
+        shutil.rmtree(INCLUDE)
 
     LIB.mkdir()
 

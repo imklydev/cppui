@@ -5,6 +5,6 @@ void error(std::string msg) {
     exit(0);
 }
 
-void log(std::string msg) {
+void debug(std::string msg) {
     std::cout << msg << "\n";
 }
