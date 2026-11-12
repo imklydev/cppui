@@ -30,12 +30,10 @@ void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture)
 }
 
 // Text
-SDL_Texture *CreateTextTexture(std::string text, TTF_Font *font)
+SDL_Texture *CreateTextTexture(std::string text, TTF_Font *font, Color color)
 {
-    SDL_Color color;
-    SDL_GetRenderDrawColor(renderer, &color.r, &color.g, &color.b, &color.a);
-
-    SDL_Surface *text_surface = TTF_RenderText_Blended(font, text.c_str(), 0, color);
+    SDL_Color SDLColor = {color.r, color.g, color.b, color.a};
+    SDL_Surface *text_surface = TTF_RenderText_Blended(font, text.c_str(), 0, SDLColor);
     SDL_Texture *text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
     SDL_DestroySurface(text_surface);
 

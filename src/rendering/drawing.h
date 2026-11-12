@@ -18,6 +18,6 @@ extern void DrawRect(Vector2 pos, Vector2 size, bool filled);
 extern void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture);
 
 // Text
-SDL_Texture *CreateTextTexture(std::string text, TTF_Font *font);
+SDL_Texture *CreateTextTexture(std::string text, TTF_Font *font, Color color);
 
 void DrawText(SDL_Texture *texture, Vector2 pos, Vector2 size);

@@ -20,6 +20,7 @@ add_library(cppui STATIC
     src/rendering/rendering.cpp
     src/event_handling/get_events.cpp
     src/rendering/drawing.cpp
+    src/components/text.cpp
     )
 
 target_link_libraries(cppui PRIVATE

@@ -20,10 +20,11 @@ int main()
             running = false;
         }
 
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
         app.update();
-        app.draw();
+        app.draw({0, 0});
 
         SDL_RenderPresent(renderer);
         SDL_Delay(16);
