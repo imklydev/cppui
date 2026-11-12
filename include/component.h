@@ -1,5 +1,7 @@
 #include <vector>
+#include "misc.h"
 
+// The base Component class
 class Component;
 
 class Component

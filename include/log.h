@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 // prints a message to the console, and quits the application.

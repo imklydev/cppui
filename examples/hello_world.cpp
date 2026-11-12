@@ -6,6 +6,6 @@ App Application()
     debug("hello world!");
 
     return App({
-        
+
     });
 }

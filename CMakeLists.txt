@@ -19,6 +19,7 @@ add_library(cppui STATIC
     src/misc/log.cpp
     src/rendering/rendering.cpp
     src/event_handling/get_events.cpp
+    src/rendering/drawing.cpp
     )
 
 target_link_libraries(cppui PRIVATE
