@@ -1,5 +1,21 @@
 # cppui - A C++ framework for creating performant, cross-platform desktop apps.
 
+## Code example
+```cpp
+#include "app.h"
+
+App Application()
+{
+    debug("hello world!");
+
+    return App({
+        Text("hellooo world!", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
+        Text("this is such a cool desktop app, isn't it?", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
+        Text("WOAH BIG TEXT", GetFont("JetBrainsMono.ttf", 64.0f), WHITE),
+    });
+}
+```
+
 ## Plans for cppui
 - Create a component-based architecture for building user interfaces, similar to [React](https://github.com/react/react/) or other web frameworks.
 

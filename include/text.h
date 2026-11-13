@@ -11,7 +11,6 @@ extern TTF_Font *GetFont(std::string path, float font_size);
 class TextComponent : public Component
 {
 private:
-    Vector2 text_size;
     SDL_Texture *text_texture;
 
 public:

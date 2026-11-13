@@ -1,12 +1,12 @@
 #include "app.h"
-#include "log.h"
 
 App Application()
 {
     debug("hello world!");
 
     return App({
-        Text("hellooo", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
-        Text("                    another text here!", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
+        Text("hellooo world!", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
+        Text("this is such a cool desktop app, isn't it?", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
+        Text("WOAH BIG TEXT", GetFont("JetBrainsMono.ttf", 64.0f), WHITE),
     });
 }
