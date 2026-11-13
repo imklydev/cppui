@@ -9,10 +9,10 @@
 #include "misc.h"
 
 // Color
-extern void SetDrawColor(SDL_Color color);
+extern void SetDrawColor(Color color);
 
 // Shapes
-extern void DrawRect(Vector2 pos, Vector2 size, bool filled);
+extern void DrawRect(Vector2 pos, Vector2 size, bool filled = true);
 
 // Images
 extern void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture);

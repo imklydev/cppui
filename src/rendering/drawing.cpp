@@ -1,7 +1,7 @@
 #include "drawing.h"
 
 // Color
-void SetDrawColor(SDL_Color color)
+void SetDrawColor(Color color)
 {
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 }

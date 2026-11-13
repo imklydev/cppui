@@ -21,6 +21,7 @@ add_library(cppui STATIC
     src/event_handling/get_events.cpp
     src/rendering/drawing.cpp
     src/components/text.cpp
+    src/components/panel.cpp
     )
 
 target_link_libraries(cppui PRIVATE
