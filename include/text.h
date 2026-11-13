@@ -5,6 +5,8 @@
 struct TTF_Font;
 struct SDL_Texture;
 
+typedef TTF_Font *Font;
+
 extern TTF_Font *GetFont(std::string path, float font_size);
 
 // A component that displays text

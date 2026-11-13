@@ -2,8 +2,10 @@
 
 #include "component.h"
 
+#include "vertical_container.h"
+
 // A component that has a background
-class PanelComponent : public Component
+class PanelComponent : public VerticalContainerComponent
 {
 private:
     Color color;

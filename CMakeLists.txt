@@ -22,6 +22,7 @@ add_library(cppui STATIC
     src/rendering/drawing.cpp
     src/components/text.cpp
     src/components/panel.cpp
+    src/components/vertical_container.cpp
     )
 
 target_link_libraries(cppui PRIVATE

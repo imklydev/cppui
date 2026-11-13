@@ -13,5 +13,11 @@ App Application()
                   Text("woahh background is blue now", GetFont("JetBrainsMono.ttf", 16.0f), BLACK),
                   Text("kinda cool if you ask me", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
               }),
+        VerticalContainer(
+            {
+                Text("red", GetFont("JetBrainsMono.ttf", 16.0f), RED),
+                Text("red", GetFont("JetBrainsMono.ttf", 16.0f), RED),
+                Text("red", GetFont("JetBrainsMono.ttf", 16.0f), RED),
+            }),
     });
 }
