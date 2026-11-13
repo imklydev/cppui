@@ -5,6 +5,7 @@
 #include "text.h"
 #include "panel.h"
 #include "vertical_container.h"
+#include "horizontal_container.h"
 
 #include "theme.h"
 #include "log.h"

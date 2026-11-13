@@ -23,6 +23,7 @@ add_library(cppui STATIC
     src/components/text.cpp
     src/components/panel.cpp
     src/components/vertical_container.cpp
+    src/components/horizontal_container.cpp
     )
 
 target_link_libraries(cppui PRIVATE
