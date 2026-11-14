@@ -24,4 +24,6 @@ public:
     };
 };
 
+inline App app({});
+
 extern App Application();

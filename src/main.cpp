@@ -8,7 +8,7 @@ int main()
 
     CreateSDLWindow();
 
-    App app = Application();
+    app = Application();
 
     bool running = true;
     while (running)

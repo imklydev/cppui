@@ -27,4 +27,9 @@ public:
         }
     };
     virtual void draw(Vector2 pos) {};
+
+    void AddChild(Component *component)
+    {
+        children.push_back(component);
+    }
 };

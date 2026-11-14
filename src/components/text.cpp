@@ -3,6 +3,11 @@
 
 TTF_Font *GetFont(std::string path, float font_size)
 {
+    if ((TTF_WasInit() == 0) && !TTF_Init())
+    {
+        error("SDL_ttf (font handling library) could not initialize");
+    }
+
     return TTF_OpenFont(path.c_str(), font_size);
 }
 

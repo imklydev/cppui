@@ -1,16 +1,16 @@
 #include "app.h"
 
+Font font16 = GetFont("JetBrainsMono.ttf", 16.0f);
+Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
+
 void button_pressed()
 {
-    debug("you pressed the button!");
+    app.AddChild(Text("Hello!", font16, WHITE));
 }
 
 App Application()
 {
     debug("hello world!");
-
-    Font font16 = GetFont("JetBrainsMono.ttf", 16.0f);
-    Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
 
     return App({
         Text("hellooo world!", font16, WHITE),

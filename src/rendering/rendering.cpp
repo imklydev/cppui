@@ -10,7 +10,7 @@ void InitRenderingBackend()
         error("SDL (the rendering backend) could not initialize");
     }
 
-    if (!TTF_Init())
+    if ((TTF_WasInit() == 0) && !TTF_Init())
     {
         error("SDL_ttf (font handling library) could not initialize");
     }
