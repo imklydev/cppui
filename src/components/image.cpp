@@ -1,8 +1,9 @@
 #include "image.h"
 #include "rendering/drawing.h"
 
-ImageComponent::ImageComponent(std::string path, Vector2 size) : size(size)
+ImageComponent::ImageComponent(std::string path, Vector2 size)
 {
+    this->size = size;
     this->image_texture = CreateImageTexture(path);
 }
 

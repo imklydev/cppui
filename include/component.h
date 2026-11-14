@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <functional>
 #include <string>
 #include <algorithm>
 #include "misc.h"
@@ -12,6 +13,9 @@ class Component;
 class Component
 {
 protected:
+    std::vector<Component *> cached_components;
+    std::vector<std::function<void()>> queued_operations;
+
     Vector2 pos;
 
 public:
@@ -26,12 +30,23 @@ public:
         {
             child->update();
         }
+
+        for (std::function<void()> &op : queued_operations)
+        {
+            op();
+        }
+        queued_operations.clear();
     };
     virtual void draw(Vector2 pos) {};
 
     void AddChild(Component *component)
     {
-        children.push_back(component);
+        queued_operations.push_back(
+            [this, component]()
+            {
+                cached_components.push_back(component);
+                children.push_back(cached_components[cached_components.size() - 1]);
+            });
     }
 
     Component *GetChild(int idx)
@@ -42,6 +57,6 @@ public:
         }
 
         error("GetChild(int idx): idx out of bounds");
-        return this;
+        return nullptr;
     }
 };

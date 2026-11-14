@@ -9,7 +9,6 @@ class ImageComponent : public Component
 {
 private:
     SDL_Texture *image_texture;
-    Vector2 size;
 
 public:
     ImageComponent(std::string path, Vector2 size);
