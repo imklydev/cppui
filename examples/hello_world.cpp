@@ -6,6 +6,14 @@ Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
 void button_pressed()
 {
     app.AddChild(Text("Hello!", font16, WHITE));
+
+    app.GetChild(5)->AddChild(Text(" new text! ", font16, WHITE));
+}
+
+void bad_button_pressed()
+{
+    // GetChild() out of bounds
+    app.GetChild(245)->AddChild(Text(" new text! ", font16, WHITE));
 }
 
 App Application()
@@ -34,6 +42,10 @@ App Application()
         Button(button_pressed, BLUE,
                {
                    Text("click mee!", font16, WHITE),
+               }),
+        Button(bad_button_pressed, RED,
+               {
+                   Text("DON'T click me!", font16, WHITE),
                }),
     });
 }

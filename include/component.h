@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include "misc.h"
+#include "log.h"
 
 // The base Component class
 class Component;
@@ -31,5 +32,16 @@ public:
     void AddChild(Component *component)
     {
         children.push_back(component);
+    }
+
+    Component *GetChild(int idx)
+    {
+        if (idx >= 0 && idx < children.size())
+        {
+            return children[idx];
+        }
+
+        error("GetChild(int idx): idx out of bounds");
+        return this;
     }
 };
