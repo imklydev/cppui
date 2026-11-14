@@ -4,6 +4,7 @@
 
 #include "text.h"
 #include "panel.h"
+#include "button.h"
 #include "vertical_container.h"
 #include "horizontal_container.h"
 

@@ -19,11 +19,13 @@ add_library(cppui STATIC
     src/misc/log.cpp
     src/rendering/rendering.cpp
     src/event_handling/get_events.cpp
+    src/event_handling/mouse.cpp
     src/rendering/drawing.cpp
     src/components/text.cpp
     src/components/panel.cpp
     src/components/vertical_container.cpp
     src/components/horizontal_container.cpp
+    src/components/button.cpp
     )
 
 target_link_libraries(cppui PRIVATE

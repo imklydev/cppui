@@ -3,7 +3,6 @@
 
 PanelComponent::PanelComponent(Color color, std::vector<Component *> children) : VerticalContainerComponent(children), color(color)
 {
-    this->reupdate_size_to_fit_children = true;
 }
 
 void PanelComponent::draw(Vector2 pos)

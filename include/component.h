@@ -11,7 +11,7 @@ class Component;
 class Component
 {
 protected:
-    bool reupdate_size_to_fit_children = false;
+    Vector2 pos;
 
 public:
     std::vector<Component *> children;
@@ -19,6 +19,12 @@ public:
 
     Component(std::vector<Component *> children = {}) : children(children) {}
 
-    virtual void update() {};
+    virtual void update()
+    {
+        for (Component *child : children)
+        {
+            child->update();
+        }
+    };
     virtual void draw(Vector2 pos) {};
 };

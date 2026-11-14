@@ -3,11 +3,12 @@
 
 VerticalContainerComponent::VerticalContainerComponent(std::vector<Component *> children) : Component(children)
 {
-    this->reupdate_size_to_fit_children = true;
 }
 
 void VerticalContainerComponent::draw(Vector2 pos)
 {
+    this->pos = pos;
+
     Vector2 child_pos = pos;
     float max_child_width = 0;
     float max_child_height = 0;
@@ -28,13 +29,10 @@ void VerticalContainerComponent::draw(Vector2 pos)
         }
     }
 
-    if (reupdate_size_to_fit_children)
-    {
-        size = child_pos - pos;
+    size = child_pos - pos;
 
-        size.x = std::max(size.x, max_child_width);
-        size.y = std::max(size.y, max_child_height);
-    }
+    size.x = std::max(size.x, max_child_width);
+    size.y = std::max(size.y, max_child_height);
 }
 
 VerticalContainerComponent *VerticalContainer(std::vector<Component *> children)

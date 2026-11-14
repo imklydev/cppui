@@ -1,5 +1,10 @@
 #include "app.h"
 
+void button_pressed()
+{
+    debug("you pressed the button!");
+}
+
 App Application()
 {
     debug("hello world!");
@@ -26,5 +31,9 @@ App Application()
             Text("blue ", font16, BLUE),
             Text("pink", font16, PINK),
         }),
+        Button(button_pressed, BLUE,
+               {
+                   Text("click mee!", font16, WHITE),
+               }),
     });
 }

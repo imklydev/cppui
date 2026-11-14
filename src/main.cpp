@@ -14,6 +14,7 @@ int main()
     while (running)
     {
         event = GetEvents();
+        UpdateMouseFrame(event);
 
         if (event.quit)
         {
