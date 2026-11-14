@@ -47,5 +47,6 @@ App Application()
                {
                    Text("DON'T click me!", font16, WHITE),
                }),
+        Image("cat.png", {200, 200}),
     });
 }

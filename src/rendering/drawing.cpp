@@ -22,6 +22,11 @@ void DrawRect(Vector2 pos, Vector2 size, bool filled)
 }
 
 // Images
+SDL_Texture *CreateImageTexture(std::string path)
+{
+    return IMG_LoadTexture(renderer, path.c_str());
+}
+
 void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture)
 {
     SDL_FRect rect = {pos.x, pos.y, size.x, size.y};

@@ -15,6 +15,8 @@ extern void SetDrawColor(Color color);
 extern void DrawRect(Vector2 pos, Vector2 size, bool filled = true);
 
 // Images
+extern SDL_Texture *CreateImageTexture(std::string path);
+
 extern void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture);
 
 // Text
