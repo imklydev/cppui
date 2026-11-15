@@ -28,6 +28,7 @@ add_library(cppui STATIC
     src/components/button.cpp
     src/components/image.cpp
     src/components/margin_container.cpp
+    src/components/centered_vertical_container.cpp
     )
 
 target_link_libraries(cppui PRIVATE

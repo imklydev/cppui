@@ -8,6 +8,7 @@
 #include "vertical_container.h"
 #include "horizontal_container.h"
 #include "margin_container.h"
+#include "centered_vertical_container.h"
 #include "image.h"
 
 #include "theme.h"

@@ -50,5 +50,12 @@ App Application()
                                             Text("DON'T click me!", font16, WHITE),
                                         }),
         Image("cat.png", {200, 200}),
+        MarginContainer(10, {
+                                CenteredVerticalContainer({
+                                    Text("hellooooooooo! [insert really long sentence here to show the centering]", font16, WHITE),
+                                    Text("this is centered!", font16, WHITE),
+                                    Text("thats pretty cool", font16, WHITE),
+                                }),
+                            }),
     });
 }
