@@ -27,6 +27,7 @@ add_library(cppui STATIC
     src/components/horizontal_container.cpp
     src/components/button.cpp
     src/components/image.cpp
+    src/components/margin_container.cpp
     )
 
 target_link_libraries(cppui PRIVATE

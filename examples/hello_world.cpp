@@ -5,7 +5,8 @@ Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
 
 void button_pressed()
 {
-    app.AddChild(Text("Hello!", font16, WHITE));
+
+    app.AddChild(Text(" new text! ", font16, WHITE));
 
     app.GetChild(5)->AddChild(Text(" new text! ", font16, WHITE));
 }
@@ -26,8 +27,11 @@ App Application()
         Text("WOAH BIG TEXT", font64, WHITE),
         Panel(BLUE,
               {
-                  Text("woahh background is blue now", font16, BLACK),
-                  Text("kinda cool if you ask me", font16, WHITE),
+                  MarginContainer(25, {
+                                          Text("woahh background is blue now", font16, BLACK),
+                                          Text("kinda cool if you ask me", font16, WHITE),
+                                          Text("woah some cool margin too", font16, WHITE),
+                                      }),
               }),
         VerticalContainer({
             Text("red", font16, RED),
@@ -39,14 +43,12 @@ App Application()
             Text("blue ", font16, BLUE),
             Text("pink", font16, PINK),
         }),
-        Button(button_pressed, BLUE,
-               {
-                   Text("click mee!", font16, WHITE),
-               }),
-        Button(bad_button_pressed, RED,
-               {
-                   Text("DON'T click me!", font16, WHITE),
-               }),
+        Button(button_pressed, BLUE, {
+                                         Text("click mee!", font16, WHITE),
+                                     }),
+        Button(bad_button_pressed, RED, {
+                                            Text("DON'T click me!", font16, WHITE),
+                                        }),
         Image("cat.png", {200, 200}),
     });
 }

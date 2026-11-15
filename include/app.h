@@ -7,11 +7,12 @@
 #include "button.h"
 #include "vertical_container.h"
 #include "horizontal_container.h"
+#include "margin_container.h"
+#include "image.h"
 
 #include "theme.h"
 #include "log.h"
 #include "misc.h"
-#include "image.h"
 
 // The App class, the parent of all of your components rendered to the screen
 class App : public VerticalContainerComponent
