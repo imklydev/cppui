@@ -4,5 +4,6 @@
 
 #include "event.h"
 #include "mouse.h"
+#include "window.h"
 
 Event GetEvents();

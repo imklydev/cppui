@@ -5,7 +5,6 @@ Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
 
 void button_pressed()
 {
-
     app.AddChild(Text(" new text! ", font16, WHITE));
 
     app.GetChild(5)->AddChild(Text(" new text! ", font16, WHITE));
@@ -52,10 +51,11 @@ App Application()
         Image("cat.png", {200, 200}),
         MarginContainer(10, {
                                 CenteredVerticalContainer({
-                                    Text("hellooooooooo! [insert really long sentence here to show the centering]", font16, WHITE),
-                                    Text("this is centered!", font16, WHITE),
-                                    Text("thats pretty cool", font16, WHITE),
-                                }),
+                                                              Text("hellooooooooo! [insert really long sentence here to show the centering]", font16, WHITE),
+                                                              Text("this is centered!", font16, WHITE),
+                                                              Text("thats pretty cool", font16, WHITE),
+                                                          })
+                                    ->resize({WINDOW_WIDTH, NO_CHANGE}),
                             }),
     });
 }

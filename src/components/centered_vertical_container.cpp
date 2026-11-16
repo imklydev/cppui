@@ -22,6 +22,9 @@ void CenteredVerticalContainerComponent::draw(Vector2 pos)
     }
     size.x = max_child_width;
 
+    // to make sure the children are centered with the correct size taken in consideration
+    Component::draw(pos);
+
     // Draw the children centered
     for (Component *child : children)
     {
@@ -30,6 +33,8 @@ void CenteredVerticalContainerComponent::draw(Vector2 pos)
     }
 
     size.y = child_pos.y - pos.y;
+    
+    Component::draw(pos);
 }
 
 CenteredVerticalContainerComponent *CenteredVerticalContainer(std::vector<Component *> children)

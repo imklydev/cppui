@@ -2,6 +2,8 @@
 
 Event GetEvents()
 {
+    UpdateWindowInfoValues();
+
     Event e;
 
     SDL_Event event;
@@ -18,7 +20,8 @@ Event GetEvents()
             if (event.button.button == SDL_BUTTON_LEFT)
             {
                 e.left_clicked = true;
-            } else if(event.button.button == SDL_BUTTON_RIGHT)
+            }
+            else if (event.button.button == SDL_BUTTON_RIGHT)
             {
                 e.right_clicked = true;
             }

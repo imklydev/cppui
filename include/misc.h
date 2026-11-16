@@ -13,6 +13,16 @@ struct Vector2
     {
         return {x - v.x, y - v.y};
     }
+
+    bool operator==(Vector2 v) const
+    {
+        return x == v.x && y == v.y;
+    }
+
+    bool operator!=(Vector2 v) const
+    {
+        return !(*this == v);
+    }
 };
 
 struct Vector2i
@@ -27,6 +37,16 @@ struct Vector2i
     Vector2i operator-(Vector2i v) const
     {
         return {x - v.x, y - v.y};
+    }
+
+    bool operator==(Vector2i v) const
+    {
+        return x == v.x && y == v.y;
+    }
+
+    bool operator!=(Vector2i v) const
+    {
+        return !(*this == v);
     }
 };
 

@@ -33,6 +33,8 @@ void VerticalContainerComponent::draw(Vector2 pos)
 
     size.x = std::max(size.x, max_child_width);
     size.y = std::max(size.y, max_child_height);
+
+    Component::draw(pos);
 }
 
 VerticalContainerComponent *VerticalContainer(std::vector<Component *> children)

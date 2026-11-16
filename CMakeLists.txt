@@ -20,6 +20,7 @@ add_library(cppui STATIC
     src/rendering/rendering.cpp
     src/event_handling/get_events.cpp
     src/event_handling/mouse.cpp
+    src/event_handling/window.cpp
     src/rendering/drawing.cpp
     src/components/text.cpp
     src/components/panel.cpp
