@@ -1,5 +1,7 @@
 #include "app.h"
 
+#include "card.h"
+
 Font font16 = GetFont("JetBrainsMono.ttf", 16.0f);
 Font font64 = GetFont("JetBrainsMono.ttf", 64.0f);
 
@@ -26,6 +28,7 @@ App Application()
         Text("hellooo world!", font16, WHITE),
         Text("this is such a cool desktop app, isn't it?", font16, WHITE),
         Text("WOAH BIG TEXT", font64, WHITE),
+        Card()
         Panel(BLUE,
               {
                   MarginContainer(25, {
@@ -66,5 +69,6 @@ App Application()
                                         Text(", this is centered", font16, WHITE),
                                     })
             ->resize({WINDOW_WIDTH, NO_CHANGE}),
+        Card(23)
     });
 }

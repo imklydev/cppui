@@ -5,6 +5,7 @@
 #include "text.h"
 #include "panel.h"
 #include "button.h"
+#include "custom_component.h"
 #include "vertical_container.h"
 #include "horizontal_container.h"
 #include "margin_container.h"
