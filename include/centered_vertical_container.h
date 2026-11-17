@@ -11,5 +11,5 @@ public:
     void draw(Vector2 pos) override;
 };
 
-// Creates a MarginContainer component
+// Creates a CenteredVerticalContainer component
 extern CenteredVerticalContainerComponent *CenteredVerticalContainer(std::vector<Component *> children);

@@ -57,5 +57,11 @@ App Application()
                                                           })
                                     ->resize({WINDOW_WIDTH, NO_CHANGE}),
                             }),
+        CenteredHorizontalContainer({
+                                        Text("Woah, ", font16, WHITE),
+                                        Image("cat.png", {75, 75}),
+                                        Text(", this is centered", font16, WHITE),
+                                    })
+            ->resize({WINDOW_WIDTH, NO_CHANGE}),
     });
 }
