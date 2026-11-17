@@ -9,9 +9,9 @@ void button_pressed()
 {
     app.AddChild(Text(" new text! ", font16, WHITE));
 
-    app.GetChild(5)->AddChild(Text(" new text! ", font16, WHITE));
+    app.GetChild(0)->AddChild(Text(" new text! ", font16, WHITE));
 
-    app.GetChild("red_container")->AddChild(Text(" red ", font16, RED));
+    app.GetChild(0)->GetChild("red_container")->AddChild(Text(" red ", font16, RED));
 }
 
 void bad_button_pressed()
@@ -24,52 +24,56 @@ App Application()
 {
     debug("hello world!");
 
-    return App({
-        Text("hellooo world!", font16, WHITE),
-        Text("this is such a cool desktop app, isn't it?", font16, WHITE),
-        Text("WOAH BIG TEXT", font64, WHITE),
-        Panel(BLUE,
-              {
-                  MarginContainer(25, {
-                                          Text("woahh background is blue now", font16, BLACK),
-                                          Text("kinda cool if you ask me", font16, WHITE),
-                                          Text("woah some cool margin too", font16, WHITE),
-                                      }),
-              }),
-        VerticalContainer({
-                              Text("red", font16, RED),
-                              Text("red", font16, RED),
-                              Text("red", font16, RED),
-                          })
-            ->setID("red_container"),
-        HorizontalContainer({
-            Text("green ", font16, GREEN),
-            Text("blue ", font16, BLUE),
-            Text("pink", font16, PINK),
-        }),
-        Card(),
-        Card(),
-        Card(),
-        Button(button_pressed, BLUE, {
-                                         Text("click mee!", font16, WHITE),
-                                     }),
-        Button(bad_button_pressed, RED, {
-                                            Text("DON'T click me!", font16, WHITE),
-                                        }),
-        Image("cat.png", {200, 200}),
-        MarginContainer(10, {
-                                CenteredVerticalContainer({
-                                                              Text("hellooooooooo! [insert really long sentence here to show the centering]", font16, WHITE),
-                                                              Text("this is centered!", font16, WHITE),
-                                                              Text("thats pretty cool", font16, WHITE),
-                                                          })
-                                    ->resize({WINDOW_WIDTH, NO_CHANGE}),
-                            }),
-        CenteredHorizontalContainer({
-                                        Text("Woah, ", font16, WHITE),
-                                        Image("cat.png", {75, 75}),
-                                        Text(", this is centered", font16, WHITE),
-                                    })
-            ->resize({WINDOW_WIDTH, NO_CHANGE}),
-    });
+    return App(
+        {
+            ScrollContainer({
+
+                Text("hellooo world!", font16, WHITE)->setID("first_text"),
+                Text("this is such a cool desktop app, isn't it?", font16, WHITE),
+                Text("WOAH BIG TEXT", font64, WHITE),
+                Panel(BLUE,
+                      {
+                          MarginContainer(25, {
+                                                  Text("woahh background is blue now", font16, BLACK),
+                                                  Text("kinda cool if you ask me", font16, WHITE),
+                                                  Text("woah some cool margin too", font16, WHITE),
+                                              }),
+                      }),
+                VerticalContainer({
+                                      Text("red", font16, RED),
+                                      Text("red", font16, RED),
+                                      Text("red", font16, RED),
+                                  })
+                    ->setID("red_container"),
+                HorizontalContainer({
+                    Text("green ", font16, GREEN),
+                    Text("blue ", font16, BLUE),
+                    Text("pink", font16, PINK),
+                }),
+                Card(),
+                Card(),
+                Card(),
+                Button(button_pressed, BLUE, {
+                                                 Text("click mee!", font16, WHITE),
+                                             }),
+                Button(bad_button_pressed, RED, {
+                                                    Text("DON'T click me!", font16, WHITE),
+                                                }),
+                Image("cat.png", {200, 200}),
+                MarginContainer(10, {
+                                        CenteredVerticalContainer({
+                                                                      Text("hellooooooooo! [insert really long sentence here to show the centering]", font16, WHITE),
+                                                                      Text("this is centered!", font16, WHITE),
+                                                                      Text("thats pretty cool", font16, WHITE),
+                                                                  })
+                                            ->resize({WINDOW_WIDTH, NO_CHANGE}),
+                                    }),
+                CenteredHorizontalContainer({
+                                                Text("Woah, ", font16, WHITE),
+                                                Image("cat.png", {75, 75}),
+                                                Text(", this is centered", font16, WHITE),
+                                            })
+                    ->resize({WINDOW_WIDTH, NO_CHANGE}),
+            }),
+        });
 }

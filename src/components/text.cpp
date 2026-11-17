@@ -13,6 +13,9 @@ TTF_Font *GetFont(std::string path, float font_size)
 
 TextComponent::TextComponent(std::string text, TTF_Font *font, Color color)
 {
+    this->current_color = color;
+    this->current_font = font;
+
     this->text_texture = CreateTextTexture(text, font, color);
 
     int w, h;
@@ -31,6 +34,19 @@ void TextComponent::draw(Vector2 pos)
     }
 
     Component::draw(pos);
+}
+
+void TextComponent::ChangeText(std::string text)
+{
+    SDL_DestroyTexture(this->text_texture);
+    this->text_texture = CreateTextTexture(text, this->current_font, this->current_color);
+
+    int w, h;
+    if (TTF_GetStringSize(this->current_font, text.c_str(), text.size(), &w, &h))
+    {
+        this->size.x = static_cast<float>(w);
+        this->size.y = static_cast<float>(h);
+    }
 }
 
 TextComponent *Text(std::string text, TTF_Font *font, Color color)

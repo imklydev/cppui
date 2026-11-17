@@ -22,6 +22,8 @@ void ScrollContainerComponent::update()
     {
         scroll = 0;
     }
+
+    VerticalContainerComponent::update();
 }
 
 void ScrollContainerComponent::draw(Vector2 pos)

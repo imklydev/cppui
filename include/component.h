@@ -127,4 +127,11 @@ public:
         id = new_id;
         return this;
     }
+
+    // Child-specific public functions
+    // Theese are needed to reduce boilerplate needed to get a child and call a function intended for that component
+    // Calling these functions on a non-intended component does nothing
+
+    // Text
+    virtual void ChangeText(std::string text) {};
 };
