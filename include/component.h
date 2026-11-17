@@ -98,7 +98,7 @@ public:
 
     // Returns the first direct child whose id matches child_id.
     // Logs an error and returns nullptr if no child matches
-    Component *GetChild(std::string child_id)
+    Component *GetChild(std::string child_id, bool recursive = false)
     {
 
         for (Component *component : children)
@@ -107,9 +107,21 @@ public:
             {
                 return component;
             }
+
+            if (recursive)
+            {
+                Component *found_component = component->GetChild(child_id, true);
+                if (found_component != nullptr)
+                {
+                    return found_component;
+                }
+            }
         }
 
-        error("GetChild(string child_id): no child found with a matching ID");
+        if (!recursive)
+        {
+            error("GetChild(string child_id): no child found with a matching ID");
+        }
         return nullptr;
     }
 

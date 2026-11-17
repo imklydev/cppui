@@ -12,13 +12,14 @@ void increment_number()
 {
     number++;
 
-    app.GetChild("counter")->ChangeText("The button was pressed " + std::to_string(number) + " times");
+    app.GetChild("counter", true)->ChangeText("The button was pressed " + std::to_string(number) + " times");
 }
 
 App Application()
 {
     debug("hello world!");
 
+    // clang-format off
     return App({
         HorizontalContainer({
             VerticalContainer({
@@ -31,6 +32,7 @@ App Application()
             Image("cat.png", {80, 80}),
         })
     });
+    // clang-format on
 }
 ```
 
