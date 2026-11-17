@@ -1,4 +1,4 @@
-# cppui - A C++ framework for creating performant, cross-platform desktop apps.
+# cppui - A C++ framework for creating performant, cross-platform desktop apps
 
 ## Code example
 ```cpp
