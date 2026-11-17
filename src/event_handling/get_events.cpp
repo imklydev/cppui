@@ -26,7 +26,13 @@ Event GetEvents()
                 e.right_clicked = true;
             }
         }
+
+        if (event.type == SDL_EVENT_MOUSE_WHEEL)
+        {
+            e.scroll = event.wheel.y;
+        }
     }
 
+    UpdateMouseFrame(e);
     return e;
 }

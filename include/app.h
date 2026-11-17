@@ -8,6 +8,7 @@
 #include "custom_component.h"
 #include "vertical_container.h"
 #include "horizontal_container.h"
+#include "scroll_container.h"
 #include "margin_container.h"
 #include "centered_vertical_container.h"
 #include "centered_horizontal_container.h"

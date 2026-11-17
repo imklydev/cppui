@@ -8,6 +8,7 @@ class mouse
 {
 public:
     Vector2 pos;
+    int scroll;
 
     bool left_clicked;
     bool right_clicked;

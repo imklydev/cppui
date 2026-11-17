@@ -1,7 +1,9 @@
 #pragma once
 
-struct Event {
+struct Event
+{
     bool quit = false;
+    int scroll = 0;
 
     bool left_clicked = false;
     bool right_clicked = false;

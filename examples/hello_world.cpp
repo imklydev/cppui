@@ -28,7 +28,6 @@ App Application()
         Text("hellooo world!", font16, WHITE),
         Text("this is such a cool desktop app, isn't it?", font16, WHITE),
         Text("WOAH BIG TEXT", font64, WHITE),
-        Card()
         Panel(BLUE,
               {
                   MarginContainer(25, {
@@ -48,6 +47,9 @@ App Application()
             Text("blue ", font16, BLUE),
             Text("pink", font16, PINK),
         }),
+        Card(),
+        Card(),
+        Card(),
         Button(button_pressed, BLUE, {
                                          Text("click mee!", font16, WHITE),
                                      }),
@@ -69,6 +71,5 @@ App Application()
                                         Text(", this is centered", font16, WHITE),
                                     })
             ->resize({WINDOW_WIDTH, NO_CHANGE}),
-        Card(23)
     });
 }
