@@ -4,20 +4,41 @@
 ```cpp
 #include "app.h"
 
+Font font = GetFont("JetBrainsMono.ttf", 16.0f);
+
+int number = 0;
+
+void increment_number()
+{
+    number++;
+
+    app.GetChild("counter")->ChangeText("The button was pressed " + std::to_string(number) + " times");
+}
+
 App Application()
 {
     debug("hello world!");
 
     return App({
-        Text("hellooo world!", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
-        Text("this is such a cool desktop app, isn't it?", GetFont("JetBrainsMono.ttf", 16.0f), WHITE),
-        Text("WOAH BIG TEXT", GetFont("JetBrainsMono.ttf", 64.0f), WHITE),
+        HorizontalContainer({
+            VerticalContainer({
+                Text("hello world!", font, WHITE),
+                Text("The button was pressed 0 times", font, WHITE)->setID("counter"),
+                Button(increment_number, WHITE, {
+                    Text("Click me!", font, BLACK),
+                }),
+            }),
+            Image("cat.png", {80, 80}),
+        })
     });
 }
 ```
 
-## Plans for cppui
-- Create a component-based architecture for building user interfaces, similar to [React](https://github.com/react/react/) or other web frameworks.
+## A simple calculator app made with cppui in about 300 lines of code
+![example calculator app made with cppui](readme_images/calculator.png)
+
+## What is cppui?
+cppui is a small project that can help developers to create simple and performant apps in C++, with a component-based React-like feel.
 
 ## Third-Party libraries used
 - [SDL](https://www.libsdl.org/): the rendering backend cppui uses
