@@ -10,7 +10,6 @@
 
 // Definitions for Component::resize()
 #define NO_CHANGE -2
-#define NO_CHANGE -2
 
 // The base Component class
 class Component;

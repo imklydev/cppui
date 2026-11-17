@@ -12,7 +12,9 @@
 #include "margin_container.h"
 #include "centered_vertical_container.h"
 #include "centered_horizontal_container.h"
+#include "centered_container.h"
 #include "image.h"
+#include "window.h"
 
 #include "theme.h"
 #include "log.h"

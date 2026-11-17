@@ -31,6 +31,7 @@ add_library(cppui STATIC
     src/components/margin_container.cpp
     src/components/centered_vertical_container.cpp
     src/components/centered_horizontal_container.cpp
+    src/components/centered_container.cpp
     src/components/scroll_container.cpp
     )
 
