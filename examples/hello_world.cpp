@@ -8,6 +8,8 @@ void button_pressed()
     app.AddChild(Text(" new text! ", font16, WHITE));
 
     app.GetChild(5)->AddChild(Text(" new text! ", font16, WHITE));
+
+    app.GetChild("red_container")->AddChild(Text(" red ", font16, RED));
 }
 
 void bad_button_pressed()
@@ -33,10 +35,11 @@ App Application()
                                       }),
               }),
         VerticalContainer({
-            Text("red", font16, RED),
-            Text("red", font16, RED),
-            Text("red", font16, RED),
-        }),
+                              Text("red", font16, RED),
+                              Text("red", font16, RED),
+                              Text("red", font16, RED),
+                          })
+            ->setID("red_container"),
         HorizontalContainer({
             Text("green ", font16, GREEN),
             Text("blue ", font16, BLUE),

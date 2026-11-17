@@ -25,6 +25,7 @@ protected:
     Vector2 override_size = {-1, -1};
 
 public:
+    std::string id = "";
     std::vector<Component *> children;
     Vector2 size;
 
@@ -83,6 +84,8 @@ public:
             });
     }
 
+    // Returns the child at the given index
+    // Logs an error and returns nullptr if the index is out of bounds
     Component *GetChild(int idx)
     {
         if (idx >= 0 && idx < children.size())
@@ -94,9 +97,34 @@ public:
         return nullptr;
     }
 
+    // Returns the first direct child whose id matches child_id.
+    // Logs an error and returns nullptr if no child matches
+    Component *GetChild(std::string child_id)
+    {
+
+        for (Component *component : children)
+        {
+            if (component->id == child_id)
+            {
+                return component;
+            }
+        }
+
+        error("GetChild(string child_id): no child found with a matching ID");
+        return nullptr;
+    }
+
     Component *resize(Vector2 new_size)
     {
         override_size = new_size;
+        return this;
+    }
+
+    // Sets a unique identifier for a component
+    // Used when calling GetChild(string id)
+    Component *setID(std::string new_id)
+    {
+        id = new_id;
         return this;
     }
 };
