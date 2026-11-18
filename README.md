@@ -40,7 +40,7 @@ App Application()
 ![example calculator app made with cppui](readme_images/calculator.png)
 
 ## What is cppui?
-cppui is a small project that can help developers create simple and performant apps in C++, with a component-based React-like feel.
+cppui is a small project that can help developers create simple and performant apps in C++, with a component-based React feel.
 
 ## Third-Party libraries used
 - [SDL](https://www.libsdl.org/): the rendering backend cppui uses
