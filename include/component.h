@@ -125,7 +125,7 @@ public:
         return nullptr;
     }
 
-    Component *resize(Vector2 new_size)
+    virtual Component *resize(Vector2 new_size)
     {
         override_size = new_size;
         return this;

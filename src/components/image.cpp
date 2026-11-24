@@ -7,6 +7,12 @@ ImageComponent::ImageComponent(std::string path, Vector2 size)
     this->image_texture = CreateImageTexture(path);
 }
 
+Component *ImageComponent::resize(Vector2 new_size)
+{
+    size = new_size;
+    return this;
+}
+
 void ImageComponent::draw(Vector2 pos)
 {
     DrawImage(pos, this->size, this->image_texture);

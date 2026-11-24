@@ -13,6 +13,8 @@ private:
 public:
     ImageComponent(std::string path, Vector2 size);
 
+    Component *resize(Vector2 new_size) override;
+
     void draw(Vector2 pos) override;
 };
 
