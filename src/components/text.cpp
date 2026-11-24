@@ -19,7 +19,7 @@ TextComponent::TextComponent(std::string text, TTF_Font *font, Color color)
     this->text_texture = CreateTextTexture(text, font, color);
 
     int w, h;
-    if (TTF_GetStringSize(font, text.c_str(), text.size(), &w, &h))
+    if (TTF_GetStringSizeWrapped(this->current_font, text.c_str(), text.size(), 0, &w, &h))
     {
         this->size.x = static_cast<float>(w);
         this->size.y = static_cast<float>(h);
@@ -42,7 +42,7 @@ void TextComponent::ChangeText(std::string text)
     this->text_texture = CreateTextTexture(text, this->current_font, this->current_color);
 
     int w, h;
-    if (TTF_GetStringSize(this->current_font, text.c_str(), text.size(), &w, &h))
+    if (TTF_GetStringSizeWrapped(this->current_font, text.c_str(), text.size(), 0, &w, &h))
     {
         this->size.x = static_cast<float>(w);
         this->size.y = static_cast<float>(h);

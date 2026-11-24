@@ -38,7 +38,7 @@ void DrawImage(Vector2 pos, Vector2 size, SDL_Texture *texture)
 SDL_Texture *CreateTextTexture(std::string text, TTF_Font *font, Color color)
 {
     SDL_Color SDLColor = {color.r, color.g, color.b, color.a};
-    SDL_Surface *text_surface = TTF_RenderText_Blended(font, text.c_str(), 0, SDLColor);
+    SDL_Surface *text_surface = TTF_RenderText_Blended_Wrapped(font, text.c_str(), 0, SDLColor, 0);
     SDL_Texture *text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
     SDL_DestroySurface(text_surface);
 
