@@ -39,9 +39,6 @@ App Application()
 }
 ```
 
-## A simple calculator app made with cppui
-![example calculator app made with cppui](readme_images/calculator.png)
-
 ## What is cppui?
 cppui is a small C++ framework that can help developers create simple and performant apps in C++, with a component-based React feel.
 
@@ -92,7 +89,7 @@ g++ app.cpp -Iinclude -Llib -lcppui -o app
 ```
 
 ## Documentation
-~~You can find a documentation folder including every component type, and some best practices [here](docs/README.md).~~ **Documentation coming soon!**
+You can find a documentation folder including every component type [here](docs/README.md).
 
 ## Current state
 
@@ -112,6 +109,9 @@ Ideas for improving the framework:
 - [SDL](https://www.libsdl.org/): the rendering backend cppui uses
 - [SDL_ttf](https://github.com/libsdl-org/SDL_ttf): for font loading and text rendering
 - [SDL_image](https://github.com/libsdl-org/SDL_image): for rendering image files
+
+## A simple calculator app made with cppui
+![example calculator app made with cppui](readme_images/calculator.png)
 
 ## Building cppui from source
 cppui uses CMake, alongside a custom python build system to merge SDL static libraries to create a standalone library.
